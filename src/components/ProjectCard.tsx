@@ -14,7 +14,7 @@ const ProjectCard = ({ index, title, description, link }: ProjectCardProps) => (
       {description}
     </p>
     <a
-      className="inline-block px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition"
+      className="inline-block rounded-md p-3 text-m font-bold bg-gray-800 text-gray-200 hover:bg-gray-700 hover:text-white transition"
       href={link}
       target="_blank"
       rel="noopener noreferrer"

@@ -1,4 +1,5 @@
 import ProjectCard from "./ProjectCard";
+import { motion } from "framer-motion";
 
 const Projects = () => {
   const ProjectList = [
@@ -15,11 +16,11 @@ const Projects = () => {
     },
   ];
   return (
-    <>
+    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
       {ProjectList.map((project, index) => (
         <ProjectCard key={index} index={index} {...project} />
       ))}
-    </>
+    </motion.div>
   );
 };
 
