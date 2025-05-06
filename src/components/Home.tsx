@@ -1,5 +1,5 @@
-import linkedInIcon from "./../../src/assets/github.svg";
-import githubIcon from "./../../src/assets/linkedIn.svg";
+import githubIcon from "./../../src/assets/github.svg";
+import linkedInIcon from "./../../src/assets/linkedIn.svg";
 
 const Home = () => (
   <div className="max-w-lg ml-20">
