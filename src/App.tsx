@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 const App = () => (
   <Router basename="/dev-portfolio">
-    <div className="bg-gray-50">
+    <div className="min-h-screen flex flex-col bg-gray-50">
       <header>
         <h1 className="text-4xl font-bold text-gray-800 mb-4 text-center pt-5">
           My Portfolio
@@ -41,7 +41,7 @@ const App = () => (
           </div>
         </nav>
       </header>
-      <main className="min-h-screen text-center">
+      <main className="flex-1">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/projects" element={<Projects />} />
