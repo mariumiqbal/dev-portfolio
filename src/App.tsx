@@ -14,8 +14,8 @@ const App = () => (
           Welcome to my portfolio website built in React and TypeScript!
         </h2>
         <nav className="bg-gray-800">
-          <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-            <div className="flex h-16 items-center justify-between">
+          <div className="mx-auto px-2">
+            <div className="flex h-16 items-center gap-x-16">
               <Link
                 to="/"
                 className="rounded-md px-3 py-2 text-l font-bold text-gray-200 hover:bg-gray-700 hover:text-white"
