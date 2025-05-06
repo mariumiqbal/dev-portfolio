@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 const App = () => (
   <Router basename="/dev-portfolio">
-    <div className="min-h-screen flex flex-col bg-gray-50">
+    <div className="min-h-screen flex flex-col bg-gray-50 overflow-x-hidden">
       <header>
         <h1 className="text-4xl font-bold text-gray-800 mb-4 text-center pt-5">
           My Portfolio
@@ -15,7 +15,7 @@ const App = () => (
         </h2>
         <nav className="bg-gray-800">
           <div className="mx-auto px-2">
-            <div className="flex h-16 items-center gap-x-16">
+            <div className="flex h-16 items-center sm:gap-x-8 md:gap-x-12 lg:gap-x-16">
               <Link
                 to="/"
                 className="rounded-md px-3 py-2 text-l font-bold text-gray-200 hover:bg-gray-700 hover:text-white"
