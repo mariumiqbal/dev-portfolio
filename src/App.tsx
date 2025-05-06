@@ -10,7 +10,7 @@ const App = () => (
         <h1 className="text-4xl font-bold text-gray-800 mb-4 text-center pt-5">
           My Portfolio
         </h1>
-        <h2 className="text-2xl font-semibold text-gray-600 mb-2 text-center pb-3">
+        <h2 className="text-2xl font-semibold text-gray-600 mb-2 text-center pb-3 sm:text=l">
           Welcome to my portfolio website built in React and TypeScript!
         </h2>
         <nav className="bg-gray-800">
