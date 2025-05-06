@@ -1,5 +1,8 @@
+import linkedInIcon from "./../../src/assets/github.svg";
+import githubIcon from "./../../src/assets/linkedIn.svg";
+
 const Home = () => (
-  <div className="max-w-md mx-auto p-5">
+  <div className="max-w-lg ml-20">
     <article className="p-5">
       <h1 className="text-4xl font-bold text-gray-800 mb-4 pt-5">I'm Marium</h1>
       <h4 className="text-xl font-semibold text-gray-600 pb-5">
@@ -18,7 +21,7 @@ const Home = () => (
           rel="noopener noreferrer"
           aria-label="My profile on GitHub"
         >
-          <img className="w-6 h-6" src="src/assets/github.svg" alt="" />
+          <img className="w-6 h-6" src={githubIcon} alt="" />
         </a>
         <a
           href="https://www.linkedin.com/in/marium-iqbal-07728139"
@@ -26,7 +29,7 @@ const Home = () => (
           rel="noopener noreferrer"
           aria-label="My profile on LinkedIn"
         >
-          <img className="w-6 h-6" src="src/assets/linkedIn.svg" alt="" />
+          <img className="w-6 h-6" src={linkedInIcon} alt="" />
         </a>
       </div>
     </article>

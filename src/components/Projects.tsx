@@ -16,7 +16,13 @@ const Projects = () => {
     },
   ];
   return (
-    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      className="max-w-lg ml-20"
+    >
+      <h1 className="text-4xl font-bold text-gray-800 mb-4 pt-5">Projects</h1>
+
       {ProjectList.map((project, index) => (
         <ProjectCard key={index} index={index} {...project} />
       ))}
