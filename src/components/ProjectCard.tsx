@@ -6,15 +6,14 @@ type ProjectCardProps = {
 };
 
 const ProjectCard = ({ index, title, description, link }: ProjectCardProps) => (
-  <div>
-    <h4>
+  <div className="flex flex-col max-w-sm mx-auto">
+    <h4 className="text-xl font-semibold text-gray-800 pb-5">
       {index + 1} . {title}
     </h4>
-    <p className="text-base text-gray-600 leading-relaxed mb-4">
-      {description}
-    </p>
+    <p className="text-l font-semibold text-gray-600 mb-5">{description}</p>
     <a
-      className="inline-block px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition"
+      className="inline-block rounded-md p-3 mx-auto text-m font-bold mb-5 ml-20
+      bg-gray-800 text-gray-200 hover:bg-gray-700 hover:text-white transition"
       href={link}
       target="_blank"
       rel="noopener noreferrer"
