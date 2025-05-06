@@ -10,6 +10,24 @@ const Home = () => (
     >
       HIRE ME
     </a>
+    <div className="flex gap-x-4 py-3 justify-center">
+      <a
+        href="https://github.com/mariumiqbal"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="My profile on GitHub"
+      >
+        <img src="src/assets/github.svg" alt="" />
+      </a>
+      <a
+        href="https://www.linkedin.com/in/marium-iqbal-07728139"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="My profile on LinkedIn"
+      >
+        <img src="src/assets/linkedIn.svg" alt="" />
+      </a>
+    </div>
   </>
 );
 
