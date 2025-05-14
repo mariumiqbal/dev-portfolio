@@ -2,6 +2,11 @@ import { render, screen } from "@testing-library/react";
 import Contact from "../components/Contact";
 
 describe("Contact Component", () => {
+  it("matches snapshot", () => {
+    const { asFragment } = render(<Contact />); //if jsx change then run command npm test -- -u to update snapshot
+    expect(asFragment()).toMatchSnapshot();
+  });
+
   it("renders the main heading", () => {
     render(<Contact />);
 

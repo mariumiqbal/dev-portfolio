@@ -3,6 +3,16 @@ import { MemoryRouter } from "react-router-dom";
 import App from "../App";
 
 describe("Header Component", () => {
+  test("matches snapshot", () => {
+    const { asFragment } = render(
+      //if jsx change then run command npm test -- -u to update snapshot
+      <MemoryRouter>
+        <App />
+      </MemoryRouter>
+    );
+    expect(asFragment()).toMatchSnapshot();
+  });
+
   it("renders the header tag", () => {
     const { container } = render(
       <MemoryRouter>

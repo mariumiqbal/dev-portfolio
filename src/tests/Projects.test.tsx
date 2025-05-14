@@ -2,6 +2,11 @@ import { render, screen } from "@testing-library/react";
 import Projects from "../components/Projects";
 
 describe("Projects Component", () => {
+  it("matches snapshot", () => {
+    const { asFragment } = render(<Projects />); //if jsx change then run command npm test -- -u to update snapshot
+    expect(asFragment()).toMatchSnapshot();
+  });
+
   it("renders the main heading", () => {
     render(<Projects />);
 

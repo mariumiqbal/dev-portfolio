@@ -2,6 +2,11 @@ import { render, screen } from "@testing-library/react";
 import Home from "../components/Home";
 
 describe("Home Component", () => {
+  it("matches snapshot", () => {
+    const { asFragment } = render(<Home />); //if jsx change then run command npm test -- -u to update snapshot
+    expect(asFragment()).toMatchSnapshot();
+  });
+
   it("renders the main heading", () => {
     render(<Home />);
 
