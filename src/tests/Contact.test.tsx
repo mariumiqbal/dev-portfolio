@@ -1,7 +1,16 @@
 import { render, screen } from "@testing-library/react";
 import Contact from "../components/Contact";
+import { axe, toHaveNoViolations } from "jest-axe";
+
+expect.extend(toHaveNoViolations);
 
 describe("Contact Component", () => {
+  it("has no accessibility violations", async () => {
+    const { container } = render(<Contact />);
+    const results = await axe(container);
+    expect(results).toHaveNoViolations();
+  });
+
   it("matches snapshot", () => {
     const { asFragment } = render(<Contact />); //if jsx change then run command npm test -- -u to update snapshot
     expect(asFragment()).toMatchSnapshot();

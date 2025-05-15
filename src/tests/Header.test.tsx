@@ -1,8 +1,21 @@
 import { render, screen } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
+import { axe, toHaveNoViolations } from "jest-axe";
 import App from "../App";
 
+expect.extend(toHaveNoViolations);
+
 describe("Header Component", () => {
+  it("has no accessibility violations", async () => {
+    const { container } = render(
+      <MemoryRouter>
+        <App />
+      </MemoryRouter>
+    );
+    const results = await axe(container);
+    expect(results).toHaveNoViolations();
+  });
+
   test("matches snapshot", () => {
     const { asFragment } = render(
       //if jsx change then run command npm test -- -u to update snapshot
