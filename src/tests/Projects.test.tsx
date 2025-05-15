@@ -1,7 +1,16 @@
 import { render, screen } from "@testing-library/react";
+import { axe, toHaveNoViolations } from "jest-axe";
 import Projects from "../components/Projects";
 
+expect.extend(toHaveNoViolations);
+
 describe("Projects Component", () => {
+  it("has no accessibility violations", async () => {
+    const { container } = render(<Projects />);
+    const results = await axe(container);
+    expect(results).toHaveNoViolations();
+  });
+
   it("matches snapshot", () => {
     const { asFragment } = render(<Projects />); //if jsx change then run command npm test -- -u to update snapshot
     expect(asFragment()).toMatchSnapshot();
@@ -20,7 +29,7 @@ describe("Projects Component", () => {
 
     const title = screen.getByRole("heading", {
       name: /weather app in wix/i,
-      level: 4, //level 4 for h4
+      level: 2, //level 2 for h2
     });
     expect(title).toBeInTheDocument();
   });

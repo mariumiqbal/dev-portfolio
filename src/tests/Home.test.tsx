@@ -1,7 +1,16 @@
 import { render, screen } from "@testing-library/react";
 import Home from "../components/Home";
+import { axe, toHaveNoViolations } from "jest-axe";
+
+expect.extend(toHaveNoViolations);
 
 describe("Home Component", () => {
+  it("has no accessibility violations", async () => {
+    const { container } = render(<Home />);
+    const results = await axe(container);
+    expect(results).toHaveNoViolations();
+  });
+
   it("matches snapshot", () => {
     const { asFragment } = render(<Home />); //if jsx change then run command npm test -- -u to update snapshot
     expect(asFragment()).toMatchSnapshot();

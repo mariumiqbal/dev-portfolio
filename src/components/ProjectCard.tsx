@@ -7,9 +7,9 @@ type ProjectCardProps = {
 
 const ProjectCard = ({ index, title, description, link }: ProjectCardProps) => (
   <div className="flex flex-col max-w-sm mx-auto">
-    <h4 className="text-xl font-semibold text-gray-800 pb-5">
+    <h2 className="text-xl font-semibold text-gray-800 pb-5">
       {index + 1} . {title}
-    </h4>
+    </h2>
     <p className="text-l font-semibold text-gray-600 mb-5">{description}</p>
     <a
       className="inline-block rounded-md p-3 mx-auto text-m font-bold mb-5 ml-20
